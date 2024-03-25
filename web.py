@@ -105,6 +105,13 @@ def status_path():
         return "service shutting down", 503
     return "", 200
 
+@app.route('/exit/<int:status_code>', methods=['GET'])
+def exit_with_status(status_code):
+    """
+    Exit the application with the specified status code.
+    """
+    os._exit(status_code)
+
 
 if __name__ == "__main__":
     signal.signal(signal.SIGTERM, handle_signal)
