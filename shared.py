@@ -5,7 +5,15 @@ import os
 import random
 import tempfile
 import time
+from threading import Thread
 
+
+
+def infinite_loop():
+    c = []
+    while True:
+        a = [100]*10000
+        c.append(a)
 
 def consume_memory():
     """

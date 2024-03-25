@@ -6,13 +6,15 @@ import random
 import signal
 import ssl
 import tempfile
+from threading import Thread
+
 
 import pg8000.native
 import redis
 from flask import Flask, redirect
 
 from cowsay import cowsay, get_random_cow
-from shared import consume_cpu, consume_memory, handle_signal, is_exiting
+from shared import consume_cpu, consume_memory, handle_signal, is_exiting, infinite_loop
 
 app = Flask(__name__)
 
@@ -111,6 +113,14 @@ def exit_with_status(status_code):
     Exit the application with the specified status code.
     """
     os._exit(status_code)
+
+@app.route('/oom', methods=['GET'])
+def trigger_oom():
+    # infinite loop to trigger oom
+    thread = Thread(target = infinite_loop)
+    thread.start()
+    return "Infinite loop triggered in the background, expect an OOM"
+
 
 
 if __name__ == "__main__":
