@@ -24,7 +24,7 @@ services:
   ramMegabytes: 400
   terminationGracePeriodSeconds: 30
   cron: 0 */6 * * *
-  timeoutSeconds: 3600
+  timeoutSeconds: 60
 - name: my-app-job
   run: python cron.py
   type: job
