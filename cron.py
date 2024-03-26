@@ -11,11 +11,11 @@ def main():
     """
     starts a no-op task that consumes resources
     """
-    print("consuming cpu")
-    consume_cpu()
-    print("consuming memory")
-    consume_memory()
-    print("sleeping for 10 seconds")
+    # print("consuming cpu")
+    # consume_cpu()
+    # print("consuming memory")
+    # consume_memory()
+    print("sleeping for 70 seconds")
     time.sleep(70)
 
 
