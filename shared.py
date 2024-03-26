@@ -72,7 +72,7 @@ def handle_signal(signum, _):
     allowing other processes to stop doing work
     """
     print(f"handling signal {signum}")
-    with open(exit_file(), "wb") as f:
+    with open(exit_file(), "w", encoding="utf-8") as f:
         f.write(signum)
 
 
