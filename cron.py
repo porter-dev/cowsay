@@ -16,7 +16,7 @@ def main():
     print("consuming memory")
     consume_memory()
     print("sleeping for 10 seconds")
-    time.sleep(10)
+    time.sleep(70)
 
 
 if __name__ == "__main__":
