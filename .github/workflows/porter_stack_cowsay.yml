@@ -18,10 +18,10 @@ jobs:
       timeout-minutes: 30
       run: exec porter apply -f ./porter.yaml
       env:
-        PORTER_CLUSTER: "11"
+        PORTER_CLUSTER: "142"
         PORTER_HOST: https://dashboard.internal-tools.porter.run
         PORTER_PR_NUMBER: ${{ github.event.number }}
-        PORTER_PROJECT: "8"
+        PORTER_PROJECT: "301"
         PORTER_STACK_NAME: cowsay
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_8_11 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_301_142 }}
