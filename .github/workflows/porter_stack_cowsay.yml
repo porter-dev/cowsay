@@ -18,11 +18,12 @@ jobs:
       timeout-minutes: 30
       run: exec porter apply -f ./porter.yaml
       env:
-        PORTER_CLUSTER: "819"
-        PORTER_DEPLOYMENT_TARGET_ID: a1125ff5-9dfb-4953-a74d-8d4fcce94181
-        PORTER_HOST: https://cloud.porter.run
+        PORTER_CLUSTER: "309"
+        PORTER_DEPLOYMENT_TARGET_ID: 941e2d16-d8e1-401e-b905-eec81e34b843
+        PORTER_HOST: https://dashboard.internal-tools.porter.run
         PORTER_PR_NUMBER: ${{ github.event.number }}
-        PORTER_PROJECT: "822"
+        PORTER_PROJECT: "474"
+        PORTER_REPO_NAME: ${{ github.event.repository.name }}
         PORTER_STACK_NAME: cowsay
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_822_819 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_474_309 }}
