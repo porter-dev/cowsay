@@ -15,7 +15,7 @@ def main():
     consume_cpu()
     print("consuming memory")
     consume_memory()
-    print("sleeping for 70s")
+    print("sleeping for 70 seconds")
     time.sleep(70)
 
 
