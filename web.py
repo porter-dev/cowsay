@@ -125,4 +125,4 @@ def trigger_oom():
 
 if __name__ == "__main__":
     signal.signal(signal.SIGTERM, handle_signal)
-    app.run()
+    app.run(host="0.0.0.0")
